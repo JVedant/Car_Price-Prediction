@@ -1,18 +1,24 @@
 from flask import Flask, render_template, request
-import jsonify
-import requests
-import pickle
 import numpy as np
 import sklearn
+import jsonify
+import pickle
+import joblib
+import os
+
+from src import config
+
 from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
-model = pickle.load(open("lib/models/model.pkl", 'rb'))
+
+#model = pickle.load(open("models/DecisionTree/model.pkl", 'rb'))
+model = joblib.load("models/DecisionTree/model.pkl", 'r')
+
 @app.route('/',methods=['GET'])
 def Home():
     return render_template('index.html')
 
-
-standard_to = StandardScaler()
+#standard_to = StandardScaler()
 @app.route("/predict", methods=['POST'])
 def predict():
     Fuel_Type_Diesel=0
