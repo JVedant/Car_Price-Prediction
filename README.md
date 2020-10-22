@@ -8,7 +8,7 @@ Technique used:
   - Random Forest Regressor
   
 ---  
-the template used can be found on [index.py](https://github.com/JVedant/Car_Price-Prediction/blob/master/templates/index.html)
+the template used can be found on [index.html](https://github.com/JVedant/Car_Price-Prediction/blob/master/templates/index.html)
 
 Also the packages used to run the project can be found in [requirements.txt](https://github.com/JVedant/Car_Price-Prediction/blob/master/requirements.txt).
 You can install it using "pip install -r requirements.txt"
